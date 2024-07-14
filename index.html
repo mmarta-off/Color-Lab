@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixing Lab</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+        #palette {
+            margin-top: 10px;
+        }
+        button {
+            margin: 0 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mixingCanvas" width="600" height="400"></canvas>
+    <div id="palette">
+        <button onclick="selectColor('#FF0000')">Red</button>
+        <button onclick="selectColor('#00FF00')">Green</button>
+        <button onclick="selectColor('#0000FF')">Blue</button>
+        <button onclick="selectColor('#FFFF00')">Yellow</button>
+        <button onclick="selectColor('#FF00FF')">Magenta</button>
+        <button onclick="selectColor('#00FFFF')">Cyan</button>
+    </div>
+    <button onclick="saveArtwork()">Save Artwork</button>
+    <script src="colorlab.js"></script>
+</body>
+</html>
